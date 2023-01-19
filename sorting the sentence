@@ -1,0 +1,36 @@
+class Solution {
+    public String sortSentence(String s) 
+    {
+		String SplitArr[]=s.split(" ");
+				String []newArr= new String[SplitArr.length];
+						
+						//split sentence
+						//store spl sent in new arry	
+						//traverse arr
+						//give index = word
+						//word length- 1 =index of postion
+						//remove index no  //only word remains
+						//place back corrct pos new array	
+						//rebuild as string	
+				String orginal_sent="";
+		
+				for(int i=0;i<SplitArr.length;i++)
+				   {
+				
+					int k=SplitArr[i].length()-1; //index of no
+					int p=SplitArr[i].charAt(k)-'0'; //-0 for Ascii value 48
+										
+					newArr[p-1]=SplitArr[i].substring(0,k);
+					
+				   }
+				
+				for(String word: newArr)
+				{
+					orginal_sent+=word +" ";
+				}
+				//back up 1 space
+				orginal_sent= orginal_sent.trim();
+		
+				return orginal_sent;
+		   }
+}
